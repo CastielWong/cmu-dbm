@@ -2,7 +2,7 @@ version: '3'
 
 services:
   database:
-    container_name: demo_oracle
+    container_name: lab_oracle
     image: customized-oracle
     build:
       context: $PWD

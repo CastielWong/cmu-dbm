@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  database:
+    container_name: demo_oracle
+    image: customized-oracle
+    build:
+      context: $PWD
+      dockerfile: Dockerfile
+    shm_size: 1G
+    ports:
+      - 1521:1521
+      - 5500:5500

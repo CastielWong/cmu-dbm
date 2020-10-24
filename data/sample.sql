@@ -1,7 +1,7 @@
 DROP TABLE DemoData;
 
 CREATE TABLE DemoData (
-    A   NUMBER(4) PRIMARY KEY,
+    A   NUMBER(4)       PRIMARY KEY,
     B   VARCHAR2(10)
 );
 

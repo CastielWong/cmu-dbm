@@ -1,4 +1,10 @@
 
+- [Initialization](#initialization)
+- [Running](#running)
+- [Clean-up](#clean-up)
+- [Troubleshoot](#troubleshoot)
+
+
 This repo is used to customize the Oracle Database environment in Docker for the CMU course Database Management (95-703).
 
 ## Initialization
@@ -35,8 +41,6 @@ docker exec -it lab_oracle bash -c "sqlplus demo/tiger@//localhost:1521/XE"
 ```
 
 To load data, you can create the SQL script and put it into "data/". For example, you can run `start /data/sample.sql` in SQL\*Plus to load the sample data.
-
-### Start
 
 If the running container is exited unintentionally, rerun `docker-compose up -d` to take previous container back to run. However, if the previous container is deleted accidentally, rerun the _Initialization_ steps are necessary.
 

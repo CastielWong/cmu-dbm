@@ -49,7 +49,7 @@ If the running container is exited unintentionally, rerun `docker-compose up -d`
 
 If you would like to remove the container, simply run `docker-compose down` would delete the container. Nevertheless, files kept in the synchronized directory would still exist.
 
-Run `docker rmi customized-oracle` if you also want to the customized image
+Run `docker rmi customized-oracle:demo` if you also want to the customized image
 
 
 ## Troubleshoot

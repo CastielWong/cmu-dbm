@@ -1,15 +1,15 @@
-version: '3'
+version: "3"
 
 services:
   database:
     container_name: lab_oracle
-    image: customized-oracle
+    image: customized-oracle:demo
     build:
       context: $PWD
       dockerfile: Dockerfile
     shm_size: 1G
     ports:
-    - 1521:1521
-    - 5500:5500
+      - 1521:1521
+      - 5500:5500
     volumes:
-    - $PWD/data:/data
+      - $PWD/data:/data

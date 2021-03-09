@@ -3,6 +3,7 @@
 - [Running](#running)
 - [Clean-up](#clean-up)
 - [Troubleshoot](#troubleshoot)
+- [Reference](#reference)
 
 
 This repo is used to customize the Oracle Database environment in Docker for the CMU course Database Management (95-703).
@@ -64,3 +65,8 @@ ls -ltr oracle
 chmod 6751 $ORACLE_HOME/bin/oracle
 ls -ltr oracle
 ```
+
+
+## Reference
+- Oracle Database container images: https://github.com/oracle/docker-images/tree/main/OracleDatabase/SingleInstance
+- ORA-01034 - ORACLE Not Available tips: http://www.dba-oracle.com/sf_ora_01034_oracle_not_available.htm

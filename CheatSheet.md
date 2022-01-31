@@ -1,9 +1,12 @@
 
 - [System Command](#system-command)
-    - [SQL Plus](#sql-plus)
-    - [Administrative Command](#administrative-command)
-- [DDL](#data-definition-language)
-- [DML](#data-manipulation-language)
+  - [SQL Plus](#sql-plus)
+  - [Administrative Command](#administrative-command)
+- [Data Definition Language](#data-definition-language)
+- [Data Manipulation Language](#data-manipulation-language)
+
+
+Note that `ORDER BY` can use alias, as long as it has double quote.
 
 ## System Command
 
@@ -59,11 +62,23 @@ START {file}
 ### Administrative Command
 
 ```sql
+desc user_tab_columns
+
+SELECT	table_name, column_name, data_default, default_length
+FROM	USER_TABLE_COLUMNS;
+
+SELECT	*
+FROM	Dictionary
+WHERE	table_name = 'USER_TABLES';
+
 SELECT  username, account_status
 FROM    DBA_USERS;
 
 SELECT  table_name
 FROM    USER_TABLES;
+
+SELECT	view_name, text
+FROM	USER_VIEWS;
 
 SELECT  sysdate
 FROM    Dual;
@@ -72,7 +87,10 @@ SELECT  column_name
 FROM    all_tab_cols
 WHERE   TABLE_NAME=’’;
 
-SELECT  table_name, constraint_name
+
+desc user_constraints
+
+SELECT  table_name, constraint_name, constraint_type
 FROM    USER_CONSTRAINTS;
 ```
 
